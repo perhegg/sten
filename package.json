@@ -1,0 +1,23 @@
+{
+  "name": "sten",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "e2e_training_wheels": "^0.0.36"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm run features && npm run specs",
+    "features": "superstatic src -p 8080 & mocha --timeout 100000 --recursive  --reporter=spec features ; PORT=8080 npm run stop-test-server",
+    "specs": "mocha --recursive  --reporter=spec spec",
+    "server": "superstatic src -p 3000",
+    "stop-test-server": "lsof -ti tcp:$PORT | xargs kill"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "training-wheels:generate": "node ./node_modules/e2e_training_wheels/dist/generators.js",
+    "training-wheels:install": "node ./node_modules/e2e_training_wheels/dist/install.js"
+  }
+}
