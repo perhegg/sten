@@ -1,0 +1,58 @@
+header {
+    height: 200px;
+    background-color: yellow
+}
+p {
+    text-align: center;
+}
+.title {
+    text-align: center
+}
+.board {
+    margin-bottom: 10px;
+    text-align: center; 
+}
+.spelare{
+    display: inline;
+}
+#player {
+    margin-right: 200px
+    
+}
+#computer {
+    margin-left: 200px
+}
+#player-score {
+    margin-right: 225px 
+}
+#computer-score {
+    margin-left: 220px
+}
+#outcome {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center
+    
+}
+
+.choices {
+    text-align: center
+}
+
+.choice {
+    display: inline;
+}
+
+.choice:hover {
+    cursor: pointer;
+}
+
+#stenbild {
+    height: 136px;
+    width: 120px;
+}
+
+#saxbild {
+    height: 136px;
+    width: 120px;
+}

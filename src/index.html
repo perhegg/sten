@@ -5,30 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sten sax pase</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
 
 <header>
-    <h1>Sten sax pawse!!</h1>
+    <h1 class="title">Sten sax pawse!!</h1>
     <p>First to 10 points wins.</p>
 </header>
-
-<span>
-    <h1>Player</h1>
-</span>
-<span>
-    <h1>Computer</h1>
-</span>
-<span id="player-score">0</span>
-<span id="computer-score">0</span>
-<div>
-    <img src="" alt="">
+<div class="board">
+<span class="spelare" id="player">Player</span>
+<span class="spelare" id="computer">Computer</span>
 </div>
 
-<div>
-    <img src="" alt="">
+<div id="content"></div>
+<div class=board>
+<span class="spelare" id="player-score">0</span>
+<span class="spelare" id="computer-score">0</span>
+</div>
+<div id="outcome">Good Luck!</div>
+
+<div class="choices">
+    <span class="choice" id="st">
+        <img id="stenbild" src="./image/RoPaSc Logo.jpg" alt="">
+    </span>
+
+    <span class="choice" id="s">
+        <img id="saxbild" src="./image/download.jpeg" alt="">
+    </span>
+    
+    <span class="choice" id="p">
+        <img src="./image/paper.jpeg" alt="paper">
+    </span>
 </div>
 
-<div>
-    <img src="" alt="">
-</div>
+
+<script type="text/javascript" src="./index.js"></script>
+</body>
