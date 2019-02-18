@@ -1,15 +1,19 @@
-const { Stone } = require('../spec.helper')
+require('../spec.helper')
+require('../src/index.js')
 
-describe('Stone', () => {
- let stone = new Stone({
-    x = '1',
-    y = '1'
- })
+const { Dice } =  require('../spec.helper')
 
-it('should return Tie!')
-    expect(Stone()).to.equal('Tie!')
+describe('Dice', () => {
+    let dice = new Dice
+
+    
+
+    it('should equal tie lose victory', () => {
+
+        expect(dice(2)).to.eql()
+        
+        
+    })
 })
-it('should return Victory!')
-    expect(Stone()).to.equal('Victory!')
-it('should return Lose!')
-    expect(Stone()).to.equal('Lose!')
+
+

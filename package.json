@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "e2e_training_wheels": "^0.0.36"
+  "dependencies": {},
+  "devDependencies": {
+    "e2e_training_wheels": "0.0.36"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "npm run features && npm run specs",
     "features": "superstatic src -p 8080 & mocha --timeout 100000 --recursive  --reporter=spec features ; PORT=8080 npm run stop-test-server",
