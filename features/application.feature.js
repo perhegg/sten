@@ -19,6 +19,6 @@ context('Your Description of the test scenario', () => {
 
   // Example test
   it('renders the correct page title', async () => {
-    expect(await browser.page.title()).to.eql('Puppeteer Mocha Scaffold');
+    expect(await browser.page.title()).to.eql('Sten sax pase');
   });
 });

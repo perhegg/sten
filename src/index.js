@@ -1,5 +1,5 @@
-let player_score = 0
-let comp_score = 0
+let player_score = 1
+let comp_score = 1
 let res = document.getElementById("outcome")
 
 document.getElementById("p").addEventListener('click', function(){
@@ -11,6 +11,14 @@ document.getElementById("s").addEventListener('click', function(){
 document.getElementById("st").addEventListener('click', function(){
     Dice("r")
 })
+document.getElementById("restart").addEventListener('click', function(){
+    location.reload()
+})
+
+function Won_or_lost() {
+    if (player_score === 11) alert("You've won!!!!")
+    if (comp_score === 11) alert("You're a loser!!!!")  
+}
 
 function convertToWord(letter){
 if (letter === "r") return "Rock"
@@ -29,14 +37,14 @@ function Win(user, comp){
     console.log("Win")
     document.getElementById("player-score").innerHTML = player_score++
     res.innerHTML = `${convertToWord(user)} beats ${convertToWord(comp)}`
+    Won_or_lost()
 }
 
 function Lose(user, comp){
     console.log("Lose")
     document.getElementById("computer-score").innerHTML = comp_score++
     res.innerHTML = `${convertToWord(user)} loses to ${convertToWord(comp)}`
-
-
+    Won_or_lost()
 }
 
 function getNumber(){
@@ -66,5 +74,4 @@ function Dice(user) {
         break;
     }
 }
-
     
