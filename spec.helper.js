@@ -5,4 +5,4 @@ global.expect = chai.expect;
 
 const fs = require('fs');
 let dice = fs.readFileSync('./src/index.js');
-eval( dice + `\nexports.Dice = Dice;`)
+eval( dice + `\nexports.Per = Per;`)

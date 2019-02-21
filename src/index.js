@@ -1,6 +1,6 @@
 let player_score = 1
 let comp_score = 1
-let res = document.getElementById("outcome")
+let resultat = document.getElementById("outcome")
 
 document.getElementById("p").addEventListener('click', function(){
     Dice("p")
@@ -29,21 +29,21 @@ return "Scissor"
 
 function Tie(user, comp){
     console.log("Tie")
-    res.innerHTML = `${convertToWord(user)} ties ${convertToWord(comp)}`
+    resultat.innerHTML = `${convertToWord(user)} ties ${convertToWord(comp)}`
 
 }
 
 function Win(user, comp){
     console.log("Win")
     document.getElementById("player-score").innerHTML = player_score++
-    res.innerHTML = `${convertToWord(user)} beats ${convertToWord(comp)}`
+    resultat.innerHTML = `${convertToWord(user)} beats ${convertToWord(comp)}`
     Won_or_lost()
 }
 
 function Lose(user, comp){
     console.log("Lose")
     document.getElementById("computer-score").innerHTML = comp_score++
-    res.innerHTML = `${convertToWord(user)} loses to ${convertToWord(comp)}`
+    resultat.innerHTML = `${convertToWord(user)} loses to ${convertToWord(comp)}`
     Won_or_lost()
 }
 
