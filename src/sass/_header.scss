@@ -1,0 +1,107 @@
+
+.header {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    background-color: #F5C742;
+
+}
+
+.title-img {
+    position: absolute;
+    height: 85%;
+    width: 45%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.spelplan {
+    padding-top: 10px;
+    background-color: #F5C742;
+    height: 25vh;
+    width: 100%;
+    text-align: center;
+}
+
+.sten {
+
+    &__img {
+        height: 90%;
+        width: 90%;
+        }
+}
+
+.sax {
+
+    &__img {
+        height: 90%;
+        width: 90%;
+        }
+}
+
+.papper {
+ 
+    &__img {
+        height: 90%;
+        width: 90%;
+        }
+}
+
+.resultat {
+    padding-top: 5rem;
+    background-color: #F5C742;
+    height: 40vh;
+    text-align: center;
+}
+
+.spelare {
+    display: inline-block;
+    position: relative;
+    margin-right: 3rem;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 90px;
+    border: 5px solid black;
+    background-color: white;
+
+    &__score {
+        font-size: 2rem;
+        @include center-horisontal-vertical
+    }
+
+    &__name {
+        display: inline-block;
+        margin-right: 4rem;
+        margin-left: 1rem;    
+    
+    }
+}
+
+.computer {
+    display: inline-block;
+    position: relative;
+    margin-left: 3rem;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 90px;
+    border: 5px solid black;
+    background-color: white;
+
+    &__score {
+        font-size: 2rem;
+        @include center-horisontal-vertical
+    }
+
+    &__name {
+        display: inline-block;
+        margin-left: 6rem;    
+    }
+}
+
+.names {
+    text-align: center;
+}
+
+
+
