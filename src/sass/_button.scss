@@ -1,0 +1,24 @@
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 10rem;
+    transition: all .2s;
+    background-color: white;
+    color: grey;    
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
+        box-shadow: 0 4px 6px rgba(black,.2);
+
+    }
+    
+    &:active,
+    &:focus {
+        outline: none;
+        box-shadow: 0 .5rem 1rem rgba(black,.2);
+    }  
+}
