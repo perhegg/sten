@@ -17,10 +17,10 @@ document.querySelector(".restart").addEventListener('click', function(){
 })
 
 function Won_or_lost() {
-    if (player_score === 2) {
+    if (player_score ===11) {
         document.querySelector(".popup").classList.add('popup--open');
         document.querySelector(".popup__text").innerHTML = "You won!";
-    } else if (comp_score === 2) {
+    } else if (comp_score ===11) {
         document.querySelector(".popup").classList.add('popup--open');
         document.querySelector(".popup__text").innerHTML = "You lost!";
     }

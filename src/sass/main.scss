@@ -131,6 +131,7 @@
 .outcome {
     animation: fadein 3s ease;
     opacity: 0;
+    font-family: sans-serif;
 }
 
 .popup {
@@ -166,6 +167,7 @@
     &__text {
         padding-top: 50px;
         font-size: 3rem;
+        font-family: sans-serif;
         text-align: center;
     }
 
