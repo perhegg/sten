@@ -12,6 +12,10 @@
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: 232px 10px 50px 200px 200px 20px;
     transition: all .2s;
+
+    @include respond(phone) {
+        grid-template-columns: repeat(3, 120px);
+    }
 }
 
 .items--1 {
@@ -33,7 +37,6 @@
     transform: scale(.60);
     grid-row: 3;
     grid-column: 1 / -1;
-
 }
 
 .items--3 {
@@ -42,10 +45,17 @@
     grid-column: 1 / 2;
     transition: all .5s;
 
+    @include respond(phone) {
+        transform: scale(.40);
+    }
 
     &:hover {
         cursor: pointer;
         transform: scale(.65);
+
+        @include respond(phone) {
+            transform: scale(.43);
+        }    
     }
 
     &--effect {
@@ -62,6 +72,10 @@
     grid-row: 4;
     grid-column: 2 / 3;
     transition: all .5s;
+
+    @include respond(phone) {
+        transform: scale(.40);
+    }
 
     &:hover {
         cursor: pointer;
@@ -82,6 +96,10 @@
     grid-row: 4;
     grid-column: 3 / 4;
     transition: all .5s;
+
+    @include respond(phone) {
+        transform: scale(.40);
+    }
 
     &:hover {
         cursor: pointer;

@@ -36,6 +36,9 @@
   grid-template-columns: repeat(3, 200px);
   grid-template-rows: 232px 10px 50px 200px 200px 20px;
   transition: all .2s; }
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(3, 120px); } }
 
 .items--1 {
   justify-self: center;
@@ -60,9 +63,15 @@
   grid-row: 4;
   grid-column: 1 / 2;
   transition: all .5s; }
+  @media (max-width: 600px) {
+    .items--3 {
+      transform: scale(0.4); } }
   .items--3:hover {
     cursor: pointer;
     transform: scale(0.65); }
+    @media (max-width: 600px) {
+      .items--3:hover {
+        transform: scale(0.43); } }
   .items--3--effect {
     animation: jiggle .6s ease;
     animation-iteration-count: 4;
@@ -76,6 +85,9 @@
   grid-row: 4;
   grid-column: 2 / 3;
   transition: all .5s; }
+  @media (max-width: 600px) {
+    .items--4 {
+      transform: scale(0.4); } }
   .items--4:hover {
     cursor: pointer;
     transform: scale(0.65); }
@@ -92,6 +104,9 @@
   grid-row: 4;
   grid-column: 3 / 4;
   transition: all .5s; }
+  @media (max-width: 600px) {
+    .items--5 {
+      transform: scale(0.4); } }
   .items--5:hover {
     cursor: pointer;
     transform: scale(0.65); }

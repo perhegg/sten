@@ -17,3 +17,9 @@
     align-self: center;
     transform: scale(.60);
 }
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 600px) { @content };
+    }
+}
