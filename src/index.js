@@ -1,20 +1,14 @@
 let player_score = 1
 let comp_score = 1
 let resultat = document.querySelector(".items--9")
+let per = function(){Dice("p")}
+let per2 = function(){Dice("s")}
+let per3 = function(){Dice("r")}
 
-document.querySelector(".paper").addEventListener('click', function(){
-    Dice("p")
-})
-document.querySelector(".scissors").addEventListener('click', function(){
-    Dice("s")
-})
-document.querySelector(".rock").addEventListener('click', function(){
-    Dice("r")
-})
+document.querySelector(".paper").addEventListener('click', per)
+document.querySelector(".scissors").addEventListener('click', per2)
+document.querySelector(".rock").addEventListener('click', per3)
 
-document.querySelector(".restart").addEventListener('click', function(){
-    location.reload()
-})
 
 function Won_or_lost() {
     if (player_score ===11) {
@@ -36,22 +30,37 @@ function removeClassName(comp) {
         if(comp === "p") {
             setTimeout(function(){
             document.querySelector(".paper").classList.remove('items--5--effect')
-            }, 2000)    
+            }, 2000)
         } else if(comp==="s") {
             setTimeout(function(){
                 document.querySelector(".scissors").classList.remove('items--4--effect')
-                }, 2000)    
+                }, 2000)
         } else if(comp==="r") {
             setTimeout(function(){
                 document.querySelector(".rock").classList.remove('items--3--effect')
-                }, 2000)    
+                }, 2000)
         } else if ("all") {
             setTimeout(function(){
                 document.querySelector(".paper").classList.remove('items--5--effect')
                 document.querySelector(".scissors").classList.remove('items--4--effect')    
                 document.querySelector(".rock").classList.remove('items--3--effect')
-                }, 4000)    
+                }, 4000)
         }
+}
+
+
+
+
+function removeAndAddEventListener() {
+    document.querySelector(".paper").removeEventListener('click', per )
+    document.querySelector(".scissors").removeEventListener('click', per2 )
+    document.querySelector(".rock").removeEventListener('click', per3 )
+
+    setTimeout(function(){
+        document.querySelector(".paper").addEventListener('click', per)
+        document.querySelector(".scissors").addEventListener('click', per2)
+        document.querySelector(".rock").addEventListener('click', per3)
+        }, 4000)
 }
 
 function convertToWord(letter){
@@ -114,6 +123,7 @@ function Dice(user) {
         break;
     }
 
+    removeAndAddEventListener()
     addClassName()
     removeClassName(comp)
     removeClassName("all")

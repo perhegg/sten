@@ -55,7 +55,7 @@
 
         @include respond(phone) {
             transform: scale(.43);
-        }    
+        }
     }
 
     &--effect {
@@ -80,6 +80,10 @@
     &:hover {
         cursor: pointer;
         transform: scale(.65);
+
+        @include respond(phone) {
+            transform: scale(.43);
+        }
     }
 
     &--effect {
@@ -104,6 +108,10 @@
     &:hover {
         cursor: pointer;
         transform: scale(.65);
+
+        @include respond(phone) {
+            transform: scale(.43);
+        }
     }
 
     &--effect {
@@ -175,6 +183,11 @@
         background-color: #F5C742;
         box-shadow: 0 2rem 4rem rgba(black, .2);
         border-radius: 12px;
+
+        @include respond(phone) {
+            width: 50%;
+            height: 40vh;
+        }    
     }
 
     &--open {
@@ -187,8 +200,9 @@
         font-size: 3rem;
         font-family: sans-serif;
         text-align: center;
-    }
 
+    }
+    
 }
 
 .btn {
@@ -196,4 +210,8 @@
     left: 50%;
     top: 80%;
     transform: translate(-50%, -50%);
+    
+    @include respond(phone) {
+        font-size: 2rem;
+    }    
 }
